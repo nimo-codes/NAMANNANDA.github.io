@@ -9,7 +9,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* Body Styling */
 body {
     background-color: #f5f5f5;
     color: #333;
@@ -17,35 +16,35 @@ body {
     padding: 20px;
 }
 
-/* General Section Styling */
 section {
-    max-width: 900px;
+    max-width: 1100px;
     margin: auto;
-    padding: 40px 20px;
+    padding: 40px 30px;
     background: white;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     margin-bottom: 30px;
 }
 
-/* Profile Section */
 .profile-container {
     display: flex;
     align-items: center;
     gap: 20px;
     text-align: left;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .profile-picture {
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid #007bff;
 }
 
 .profile-info h1 {
-    font-size: 26px;
+    font-size: 2rem;
     color: #007bff;
 }
 
@@ -62,8 +61,6 @@ section {
     color: #0056b3;
 }
 
-/* Experience Section */
-/* Experience Section */
 .experience-container {
     display: flex;
     flex-direction: column;
@@ -73,21 +70,21 @@ section {
 .experience-item {
     display: flex;
     align-items: center;
-    gap: 30px; /* Increased spacing */
+    gap: 30px;
     background: #f9f9f9;
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
 }
 
-/* Larger Logo */
 .experience-logo {
-    width: 120px; /* Increased width */
-    height: 120px; /* Fixed height */
-    object-fit: contain; /* Ensure proper scaling */
-    border-radius: 8px; /* Optional: rounded corners */
-    background: white; /* Ensures logos with transparency look good */
-    padding: 5px; /* Adds some padding for better spacing */
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: white;
+    padding: 5px;
 }
 
 .experience-item div {
@@ -95,13 +92,13 @@ section {
 }
 
 .experience-item h3 {
-    font-size: 22px;
+    font-size: 1.4rem;
     font-weight: bold;
     margin: 0;
 }
 
 .experience-item h4 {
-    font-size: 18px;
+    font-size: 1.1rem;
     color: #007bff;
     margin: 5px 0;
 }
@@ -110,7 +107,6 @@ section {
     margin: 5px 0;
 }
 
-/* Publications Section */
 .paper-list {
     width: 100%;
     border-collapse: collapse;
@@ -123,13 +119,12 @@ section {
 
 .paper-title {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1.1rem;
 }
 
-/* Projects Section */
 .project-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
@@ -142,7 +137,7 @@ section {
 }
 
 .project-item:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -152,7 +147,6 @@ section {
     border-radius: 10px;
 }
 
-/* Skills List */
 ul {
     list-style: none;
     padding: 0;
@@ -165,21 +159,66 @@ ul li {
     border-left: 5px solid #007bff;
 }
 
-/* Achievements */
 #achievements ul li {
     background: #fff3cd;
     padding: 10px;
     border-left: 5px solid #ffcc00;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
     .profile-container {
         flex-direction: column;
         text-align: center;
     }
-    
+
+    .experience-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .experience-logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .contact-links a {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .profile-info h1 {
+        font-size: 1.8rem;
+    }
+
     .project-container {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+    }
+
+    .experience-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .experience-item h4 {
+        font-size: 1rem;
+    }
+
+    .profile-info h1 {
+        font-size: 1.6rem;
     }
 }
